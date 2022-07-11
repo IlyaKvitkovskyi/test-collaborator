@@ -1,0 +1,13 @@
+$default: #000;
+$bgdefault: #4f4f4f;
+$title: #504444;
+$accent: grey;
+$hover: grey;
+$disable: #E8E8E8;
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

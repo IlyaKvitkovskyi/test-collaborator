@@ -1,0 +1,121 @@
+@import './_mixins';
+
+.animate-section {
+  opacity: 0;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  // height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  // background-image: url('/images/content/bg100for100.jpg');
+  background-repeat: repeat;
+  background-size: 100px;
+  z-index: 6666;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  // background-image: url('/images/content/bg100for100.jpg');
+  background-repeat: repeat;
+  background-size: 100px;
+}
+
+.body--active {
+  .mobile-menu {
+    display: flex;
+  }
+
+  .header__popup-btn::before {
+    transform: rotate(45deg) translateY(4px);
+  }
+  .header__popup-btn::after {
+    transform: rotate(-45deg) translateY(-4px);
+  }
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 15px;
+
+    &__mob-strip {
+      padding: 0 !important;
+    }
+  }
+}
+
+.container-big {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 25px;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 40px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 15px;
+  }
+}
+
+.field {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+
+  &:focus {
+    border-color: #cecbcb;
+  }
+}
+
+.button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #4DD599;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken(#4dd599, 10%);
+  }
+
+  &:active {
+    background-color: darken(#4dd599, 20%);
+  }
+
+  &--gray {
+    margin-left: 10px;
+    background-color: #f4f6f8;
+    color: #444444;
+
+    &:hover {
+      background-color: darken(#f4f6f8, 10%);
+    }
+
+    &:active {
+      background-color: darken(#f4f6f8, 20%);
+    }
+
+  }
+}
